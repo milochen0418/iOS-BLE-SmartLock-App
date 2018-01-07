@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vAm-yS-mCt">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Lock Not found-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="receive_key_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="128-U9-fPm">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="573"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUJ-6H-drl">
+                                <rect key="frame" x="218" y="435" width="53" height="53"/>
+                                <state key="normal" backgroundImage="black_setting_disable.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToOpenSetting:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kO2-jW-LUw"/>
+                                    <segue destination="Ahv-kX-8y2" kind="push" id="TGy-2g-2Nl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yc-yC-f5Y">
+                                <rect key="frame" x="149" y="439" width="57" height="45"/>
+                                <state key="normal" backgroundImage="black_give_a_key_img.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToOpenGiveAKey:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KvR-nb-Adp"/>
+                                    <segue destination="JdQ-aG-Koz" kind="push" id="ybd-hP-FZB"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black_not_found.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0Zf-MC-8Zw">
+                                <rect key="frame" x="106" y="245" width="141" height="186"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lock not found.png" translatesAutoresizingMaskIntoConstraints="NO" id="xad-Lf-wp0">
+                                <rect key="frame" x="82" y="124" width="156" height="113"/>
+                            </imageView>
+                            <switch opaque="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1SV-YQ-SRB">
+                                <rect key="frame" x="92" y="451" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onTakeAKeyChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="uvb-MW-yve"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Take a key" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cu-gV-klQ">
+                                <rect key="frame" x="9" y="456" width="81" height="21"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMT-vb-Cr0">
+                                <rect key="frame" x="9" y="520" width="102" height="40"/>
+                                <state key="normal" title="otherGiveKey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToOtherGiveKey:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="b5v-OA-j5I"/>
+                                    <segue destination="snQ-11-SGa" kind="push" id="fLI-Vt-4XN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zs3-XM-gqc">
+                                <rect key="frame" x="136" y="522" width="102" height="36"/>
+                                <state key="normal" title="pressHWBtn">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToPressHWBtn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ERW-UV-O6t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ux6-w9-eMW">
+                                <rect key="frame" x="247" y="525" width="73" height="30"/>
+                                <state key="normal" title="lock found">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToLockFound:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MSv-AS-Ozk"/>
+                                    <segue destination="3hl-ei-2oD" kind="push" id="7Rw-jh-8BO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HdB-pi-nsl">
+                                <rect key="frame" x="9" y="501" width="153" height="30"/>
+                                <state key="normal" title="otherRequestRecvKey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToOtherRequestRecvKey:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JgY-0I-nPx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lock Not found" id="2cE-uB-cmq">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="5rc-SV-2Pz"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mGiveAKeyBtn" destination="3Yc-yC-f5Y" id="Eo5-J7-Mg0"/>
+                        <outlet property="mOtherGiveKeyBtn" destination="vMT-vb-Cr0" id="zjT-87-txv"/>
+                        <outlet property="mOtherRequestRecvKeyBtn" destination="HdB-pi-nsl" id="fNt-Tg-zzb"/>
+                        <outlet property="mSettingBtn" destination="oUJ-6H-drl" id="NOj-2I-nHy"/>
+                        <outlet property="mTakeAKeySwitch" destination="1SV-YQ-SRB" id="Mgv-k0-8io"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="381" y="319"/>
+        </scene>
+        <!--Near Lock-->
+        <scene sceneID="5wV-Ru-0l9">
+            <objects>
+                <viewController id="3hl-ei-2oD" customClass="NearLockViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eHY-Lt-Qeu"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZeE-7H-gvL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ERx-gY-uvP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="receive_key_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="X6A-0j-z2m">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="575"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ki3-bf-hhM">
+                                <rect key="frame" x="102" y="420" width="131" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                                <state key="normal" title="Unlock">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickToLockUnlock:" destination="3hl-ei-2oD" eventType="touchUpInside" id="u89-WI-5pc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lock word.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wku-er-9Mc">
+                                <rect key="frame" x="56" y="144" width="208" height="51"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black_lock_images.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Twi-Dk-3J7">
+                                <rect key="frame" x="45" y="185" width="230" height="226"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black_lock_img.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6gG-s1-T87">
+                                <rect key="frame" x="45" y="420" width="44" height="44"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upU-Ci-DfV">
+                                <rect key="frame" x="16" y="510" width="66" height="30"/>
+                                <state key="normal" title="not found">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToNotFoound:" destination="3hl-ei-2oD" eventType="touchUpInside" id="s3b-vw-O0M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8Y-td-K5q">
+                                <rect key="frame" x="95" y="472" width="114" height="30"/>
+                                <state key="normal" title="feedback unlock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToFeedbackUnlock:" destination="3hl-ei-2oD" eventType="touchUpInside" id="AHs-ss-7qb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JgT-75-SNA">
+                                <rect key="frame" x="95" y="510" width="114" height="30"/>
+                                <state key="normal" title="feedback lock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToFeedbackLock:" destination="3hl-ei-2oD" eventType="touchUpInside" id="BVe-HI-VOh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1u0-bu-1XA">
+                                <rect key="frame" x="251" y="415" width="53" height="53"/>
+                                <state key="normal" backgroundImage="black_setting_enable.jpg">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToOpenSetting:" destination="3hl-ei-2oD" eventType="touchUpInside" id="bTN-mp-d3H"/>
+                                    <segue destination="L1P-Tr-bZw" kind="push" id="AUh-zn-ItH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Near Lock" id="rGT-XM-ZHH">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="eyX-1Y-8V4"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mLockIconImgView" destination="Twi-Dk-3J7" id="2am-qM-veR"/>
+                        <outlet property="mLockUnlockBtn" destination="ki3-bf-hhM" id="Qcv-ez-coV"/>
+                        <outlet property="mLockUnlockImgView" destination="6gG-s1-T87" id="uee-C1-Afe"/>
+                        <outlet property="mLockWordImgView" destination="Wku-er-9Mc" id="Nlw-H2-vhx"/>
+                        <outlet property="mSettingBtn" destination="1u0-bu-1XA" id="Tgv-6N-vhe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQt-0l-QLl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837" y="319"/>
+        </scene>
+        <!--Give a key-->
+        <scene sceneID="vVE-hD-gXg">
+            <objects>
+                <viewController id="JdQ-aG-Koz" customClass="GiveAKeyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TSB-EK-JQR"/>
+                        <viewControllerLayoutGuide type="bottom" id="wwq-Jy-A43"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rc2-DL-iod">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="receive_key_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0Jk-b1-ce6">
+                                <rect key="frame" x="0.0" y="-4" width="320" height="575"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcG-X3-uTe">
+                                <rect key="frame" x="95" y="447" width="131" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                                <state key="normal" title="Give a key">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickToGiveAKey:" destination="JdQ-aG-Koz" eventType="touchUpInside" id="vhp-67-AVa"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black_camera_btn.png" translatesAutoresizingMaskIntoConstraints="NO" id="pNQ-59-dXa">
+                                <rect key="frame" x="99" y="232" width="123" height="127"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VoN-o2-3Gw">
+                                <rect key="frame" x="83" y="132" width="154" height="50"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="JdQ-aG-Koz" id="6AS-EF-uOX"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hbh-jZ-Xhm">
+                                <rect key="frame" x="66" y="202" width="188" height="188"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-hC-W43">
+                                <rect key="frame" x="66" y="202" width="188" height="188"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToTakePicture:" destination="JdQ-aG-Koz" eventType="touchUpInside" id="HHG-5i-OJQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Give a key" id="Khx-0U-jhw">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="LS0-7x-WS2"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mGiveAKeyBtn" destination="GcG-X3-uTe" id="QoO-g2-umL"/>
+                        <outlet property="mPhotoImgView" destination="Hbh-jZ-Xhm" id="0qt-KY-LTA"/>
+                        <outlet property="mTakePictureImg" destination="pNQ-59-dXa" id="oab-ds-WVU"/>
+                        <outlet property="mTypeNameTextField" destination="VoN-o2-3Gw" id="NCc-P4-OwD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gV-YW-ftb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1282" y="-367"/>
+        </scene>
+        <!--Lock Functions-->
+        <scene sceneID="8Tr-9o-m0B">
+            <objects>
+                <viewController id="L1P-Tr-bZw" customClass="LockFunctionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sgB-cx-nHl"/>
+                        <viewControllerLayoutGuide type="bottom" id="gB7-dn-x1B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="miq-6b-Ln1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="receive_key_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JrV-Wl-281">
+                                <rect key="frame" x="0.0" y="0.0" width="328" height="568"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PL7-gv-hfV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTq-Gv-avW">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black_give_a_key_btn.png" translatesAutoresizingMaskIntoConstraints="NO" id="hlG-SE-xdU">
+                                                <rect key="frame" x="0.0" y="100" width="320" height="166"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black_return_key_btn.png" translatesAutoresizingMaskIntoConstraints="NO" id="X8q-zv-8cr">
+                                                <rect key="frame" x="0.0" y="320" width="320" height="168"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="return" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKB-Wa-LW3">
+                                                <rect key="frame" x="90" y="340" width="52" height="21"/>
+                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black_log_history_btn.png" translatesAutoresizingMaskIntoConstraints="NO" id="G9F-Jr-jXG">
+                                                <rect key="frame" x="0.0" y="542" width="320" height="166"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmK-4z-jdO">
+                                                <rect key="frame" x="36" y="109" width="250" height="147"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clickToGiveAKey:" destination="L1P-Tr-bZw" eventType="touchUpInside" id="M8b-sX-YZC"/>
+                                                    <segue destination="JdQ-aG-Koz" kind="push" id="pvo-mg-uat"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfy-mt-ejG">
+                                                <rect key="frame" x="36" y="330" width="250" height="147"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clickToGetKeyBack:" destination="L1P-Tr-bZw" eventType="touchUpInside" id="bBB-Ie-uCe"/>
+                                                    <segue destination="NXQ-2C-sEU" kind="push" id="1Yh-DX-RbB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKy-Gu-DUe">
+                                                <rect key="frame" x="35" y="551" width="250" height="147"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clickToOpenLogStatus:" destination="L1P-Tr-bZw" eventType="touchUpInside" id="UKr-A1-LEM"/>
+                                                    <segue destination="5rC-2L-BI5" kind="push" id="9Mp-gW-kf5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lock Functions" id="waF-Xt-2gz">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="BQQ-LY-Ufe"/>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="mGetKeyBackImgView" destination="X8q-zv-8cr" id="nUV-Wn-5Iy"/>
+                        <outlet property="mGiveAKeyImgView" destination="hlG-SE-xdU" id="SC2-85-8kn"/>
+                        <outlet property="mLogStatusImgView" destination="G9F-Jr-jXG" id="xEK-j0-Pyt"/>
+                        <outlet property="mReturnLbl" destination="wKB-Wa-LW3" id="0SG-Lu-FXj"/>
+                        <outlet property="mScrollView" destination="PL7-gv-hfV" id="8uc-29-ibe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2rr-Xs-Ai6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1282" y="319"/>
+        </scene>
+        <!--Lock History-->
+        <scene sceneID="t8d-dz-esp">
+            <objects>
+                <viewController id="5rC-2L-BI5" customClass="LockHistoryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VLO-9H-j9r"/>
+                        <viewControllerLayoutGuide type="bottom" id="gRk-h9-Lpv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IYW-PA-sPO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="receive_key_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="baR-YG-eKx">
+                                <rect key="frame" x="-8" y="0.0" width="328" height="568"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OqT-Bm-7MH">
+                                <rect key="frame" x="30" y="20" width="268" height="528"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lock History" id="sFc-5Z-zsy">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="kVW-jR-Rx8"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TFu-T5-9Kb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1282" y="997"/>
+        </scene>
+        <!--Get Key Back-->
+        <scene sceneID="vw1-oO-UmU">
+            <objects>
+                <viewController id="NXQ-2C-sEU" customClass="GetKeyBackViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rOq-ZO-gT2"/>
+                        <viewControllerLayoutGuide type="bottom" id="5R3-lD-vCl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZqB-JH-ox4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="receive_key_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2m5-Ki-Fem">
+                                <rect key="frame" x="-8" y="0.0" width="328" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zob-ik-6L0">
+                                <rect key="frame" x="66" y="202" width="188" height="188"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToSelectKeyBack:" destination="NXQ-2C-sEU" eventType="touchUpInside" id="okJ-F9-PpP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black_return_key_img.png" translatesAutoresizingMaskIntoConstraints="NO" id="hWN-Dn-u09">
+                                <rect key="frame" x="64" y="185" width="286" height="198"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tu0-kT-aTF">
+                                <rect key="frame" x="66" y="202" width="188" height="188"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe0-dv-Kzo">
+                                <rect key="frame" x="95" y="447" width="131" height="44"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                                <state key="normal" title="Get key back">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickToGetKeyBack:" destination="NXQ-2C-sEU" eventType="touchUpInside" id="xt2-ip-Ch6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SELECT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="0fN-AM-1c6">
+                                <rect key="frame" x="16" y="130" width="288" height="56"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Get Key Back" id="fqm-Ix-zx7">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="kcC-Te-uUX"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mPhotoImgView" destination="tu0-kT-aTF" id="bEa-8m-Apn"/>
+                        <outlet property="mSelectPhotoImgView" destination="hWN-Dn-u09" id="PLl-PB-mJa"/>
+                        <outlet property="mShowTextLbl" destination="0fN-AM-1c6" id="CHD-NU-hlC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I9Y-lt-5ao" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1706" y="-367"/>
+        </scene>
+        <!--Select key back-->
+        <scene sceneID="ZRd-mJ-Ovr">
+            <objects>
+                <viewController storyboardIdentifier="SelectKeyBackViewController" id="NwX-Fv-huu" customClass="SelectKeyBackViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0uV-dc-V8v"/>
+                        <viewControllerLayoutGuide type="bottom" id="GmT-fk-6gD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HFw-fE-qcr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jacky Chen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouS-st-52g">
+                                <rect key="frame" x="144" y="143" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydq-cc-6ax">
+                                <rect key="frame" x="250" y="63" width="54" height="30"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToDismiss:" destination="NwX-Fv-huu" eventType="touchUpInside" id="0zw-Dh-Sup"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTD-27-bxg">
+                                <rect key="frame" x="58" y="200" width="262" height="3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doublekeys.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Qy-xa-zrS">
+                                <rect key="frame" x="24" y="104" width="84" height="83"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jay Chou" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxC-jA-tsK">
+                                <rect key="frame" x="144" y="250" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcO-gx-23f">
+                                <rect key="frame" x="58" y="307" width="262" height="3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doublekeys.png" translatesAutoresizingMaskIntoConstraints="NO" id="flu-x7-Pwx">
+                                <rect key="frame" x="24" y="211" width="84" height="83"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jolin Tsai" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fh-er-nnn">
+                                <rect key="frame" x="144" y="357" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIe-wo-OVt">
+                                <rect key="frame" x="58" y="414" width="262" height="3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doublekeys.png" translatesAutoresizingMaskIntoConstraints="NO" id="q2o-YH-nU2">
+                                <rect key="frame" x="24" y="318" width="84" height="83"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Select key back" id="RZ5-MZ-POi">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Crh-AX-C5t"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vcI-VD-2gG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2130" y="-367"/>
+        </scene>
+        <!--Be Lock Owner-->
+        <scene sceneID="ydw-mZ-hwz">
+            <objects>
+                <viewController id="Ahv-kX-8y2" customClass="BeLockOwnerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KvJ-90-Xzl"/>
+                        <viewControllerLayoutGuide type="bottom" id="mBr-Rh-bAc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="axU-Pf-zpu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="receive_key_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0ut-Zr-Ptd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="575"/>
+                            </imageView>
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUb-n4-yUe">
+                                <rect key="frame" x="85" y="419" width="150" height="44"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
+                                <state key="normal" title="Be Lock Owner">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickToBeLockOwner:" destination="Ahv-kX-8y2" eventType="touchUpInside" id="98k-AA-QAD"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lock word.png" translatesAutoresizingMaskIntoConstraints="NO" id="t1q-AL-vb6">
+                                <rect key="frame" x="56" y="144" width="208" height="51"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black_lock_images.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZWp-My-fJo">
+                                <rect key="frame" x="45" y="185" width="230" height="226"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Be Lock Owner" id="DKL-B9-Snf">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="N46-FW-hfw"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mBeLockOwnerBtn" destination="MUb-n4-yUe" id="xEL-7s-zub"/>
+                        <outlet property="mLockIconImgView" destination="ZWp-My-fJo" id="aZl-ON-D1T"/>
+                        <outlet property="mLockWordImgView" destination="t1q-AL-vb6" id="cxg-ok-Nxp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJJ-uT-D7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="837" y="-367"/>
+        </scene>
+        <!--Receive Key-->
+        <scene sceneID="FKA-rg-Wkh">
+            <objects>
+                <viewController id="snQ-11-SGa" customClass="ReceiveKeyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="no0-Zt-VZN"/>
+                        <viewControllerLayoutGuide type="bottom" id="jDO-ZE-QwP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tqd-iT-OmZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="receive_key_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="323-Tr-5X0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="576"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SI2-r8-Jfp">
+                                <rect key="frame" x="93" y="418" width="150" height="44"/>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
+                                <state key="normal" title="Take it">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickToTakeIt:" destination="snQ-11-SGa" eventType="touchUpInside" id="JDU-xn-KEm"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="key receive.png" translatesAutoresizingMaskIntoConstraints="NO" id="rn2-vl-kqW">
+                                <rect key="frame" x="93" y="141" width="149" height="94"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="black_receive_key.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="C5F-Bw-HG8">
+                                <rect key="frame" x="51" y="197" width="233" height="236"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Receive Key" id="DSm-hj-cJC">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="awT-h9-6Q3"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mKeyImgView" destination="C5F-Bw-HG8" id="zKj-l8-4c4"/>
+                        <outlet property="mKeyReceiveImgView" destination="rn2-vl-kqW" id="cbp-Wq-SqR"/>
+                        <outlet property="mTakeItBtn" destination="SI2-r8-Jfp" id="HUj-sZ-Hh6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UT3-H7-xq7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="381" y="-367"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KFr-4k-DH3">
+            <objects>
+                <navigationController id="vAm-yS-mCt" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6iL-Vk-s9o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qE7-QU-6Au" kind="relationship" relationship="rootViewController" id="XuZ-k5-f8h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7t-s0-LXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="319"/>
+        </scene>
+        <!--Smart Lock Utility View Controller-->
+        <scene sceneID="djL-AO-0jB">
+            <objects>
+                <viewController id="qE7-QU-6Au" customClass="SmartLockUtilityViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sKN-pu-MsN"/>
+                        <viewControllerLayoutGuide type="bottom" id="7AZ-17-C71"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="41g-hi-avi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCE-gw-E78">
+                                <rect key="frame" x="42" y="137" width="98" height="30"/>
+                                <state key="normal" title="OwnerDoLock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToOnwerDoLock:" destination="qE7-QU-6Au" eventType="touchUpInside" id="EwZ-9t-sUb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoL-8k-wX6">
+                                <rect key="frame" x="171" y="137" width="113" height="30"/>
+                                <state key="normal" title="OwnerDoUnlock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToOwnerDoUnlock:" destination="qE7-QU-6Au" eventType="touchUpInside" id="4ng-OO-Kaf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2J-Zu-gn8">
+                                <rect key="frame" x="42" y="170" width="94" height="30"/>
+                                <state key="normal" title="GuestDoLock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToGuestDoLock:" destination="qE7-QU-6Au" eventType="touchUpInside" id="5NG-ZC-TcT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEo-2W-iQg">
+                                <rect key="frame" x="42" y="202" width="102" height="30"/>
+                                <state key="normal" title="GetLockStatus">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToGetLockStatus:" destination="qE7-QU-6Au" eventType="touchUpInside" id="IvF-gc-XCh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tl-EA-pzv">
+                                <rect key="frame" x="171" y="170" width="109" height="30"/>
+                                <state key="normal" title="GuestDoUnlock">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToGuestDoUnlock:" destination="qE7-QU-6Au" eventType="touchUpInside" id="Nwl-1f-mQG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KC-rj-Tld">
+                                <rect key="frame" x="42" y="258" width="57" height="30"/>
+                                <state key="normal" title="GiveKey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToGiveKey:" destination="qE7-QU-6Au" eventType="touchUpInside" id="P1r-xR-8aa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7M-ac-B50">
+                                <rect key="frame" x="42" y="290" width="95" height="30"/>
+                                <state key="normal" title="GetKeyStatus">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToGetKeyStatus:" destination="qE7-QU-6Au" eventType="touchUpInside" id="8kN-RI-Mwu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kho-yE-m0c">
+                                <rect key="frame" x="171" y="258" width="72" height="30"/>
+                                <state key="normal" title="ReturnKey">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToReturnKey:" destination="qE7-QU-6Au" eventType="touchUpInside" id="8ub-i9-Gir"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="120-Rq-a2d">
+                                <rect key="frame" x="42" y="341" width="30" height="30"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4h-M4-Ih9">
+                                <rect key="frame" x="42" y="341" width="80" height="30"/>
+                                <state key="normal" title="InReceiving">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToInReceiving:" destination="qE7-QU-6Au" eventType="touchUpInside" id="EsY-0b-Qui"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4V-4A-XqG">
+                                <rect key="frame" x="171" y="341" width="105" height="30"/>
+                                <state key="normal" title="NotInReceiving">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToNotInReceiving:" destination="qE7-QU-6Au" eventType="touchUpInside" id="7b2-YV-hdD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INC-2I-td4">
+                                <rect key="frame" x="42" y="379" width="92" height="30"/>
+                                <state key="normal" title="IsInReceiving">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToIsInReceiving:" destination="qE7-QU-6Au" eventType="touchUpInside" id="k7x-jR-JKN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8p-C9-wGH">
+                                <rect key="frame" x="42" y="417" width="199" height="30"/>
+                                <state key="normal" title="NestOnwerLockUnlock TEST">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToNestOwnerLockUnlockTEST:" destination="qE7-QU-6Au" eventType="touchUpInside" id="bl3-ei-eKg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQ1-Ua-RPz">
+                                <rect key="frame" x="42" y="450" width="213" height="30"/>
+                                <state key="normal" title="ToggleOwnerLockUnlock TEST">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickToToggleOwnerLockUnlockTEST:" destination="qE7-QU-6Au" eventType="touchUpInside" id="zVm-wi-qXx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZN1-lu-uxO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zFA-6X-9EY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="1023"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="black_camera_btn.png" width="512" height="512"/>
+        <image name="black_give_a_key_btn.png" width="2571" height="1738"/>
+        <image name="black_give_a_key_img.png" width="2363" height="2167"/>
+        <image name="black_lock_images.jpg" width="512" height="512"/>
+        <image name="black_lock_img.jpg" width="67" height="94"/>
+        <image name="black_log_history_btn.png" width="2571" height="1738"/>
+        <image name="black_not_found.jpg" width="512" height="701"/>
+        <image name="black_receive_key.jpg" width="512" height="512"/>
+        <image name="black_return_key_btn.png" width="2571" height="1738"/>
+        <image name="black_return_key_img.png" width="2883" height="1836"/>
+        <image name="black_setting_disable.jpg" width="117" height="117"/>
+        <image name="black_setting_enable.jpg" width="117" height="117"/>
+        <image name="doublekeys.png" width="378" height="331"/>
+        <image name="key receive.png" width="1077" height="755"/>
+        <image name="lock not found.png" width="1356" height="791"/>
+        <image name="lock word.png" width="1348" height="424"/>
+        <image name="receive_key_bg.jpg" width="900" height="600"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="pvo-mg-uat"/>
+    </inferredMetricsTieBreakers>
+</document>
